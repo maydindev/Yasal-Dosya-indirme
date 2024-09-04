@@ -26,6 +26,8 @@ export default function App({ serverGeneratedFileId }) {
     }
   }, [userData.userId])
 
+  useEffect(() => console.log(userData),[])
+
   /* Challenge
 
 	Bu dosya için indirme sayfasının bir indirme butonuna ihtiyacı var. Göreviniz aşağıdaki gibi bir tane oluşturmaktır: 
@@ -56,7 +58,7 @@ export default function App({ serverGeneratedFileId }) {
   function handleClick(event) {
     fetch('https://ipapi.co/json/')
       .then((res) => res.json())
-      .then((data) =>
+      .then((data) => 
         setUserData((prevUserData) => {
           return {
             userId: prevUserData.userId,
